@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+  <h1>Car Rent Home</h1>
+  <p>Welcome to my car rental site!</p>
+  <p>We have:</p>
+  <ul>
+    <li><strong>Cars:</strong> {{ num_instances }}</li>
+    <ul>
+      <li><strong>Available:</strong> {{ num_instances_available }}</li>
+      <li><strong>In use:</strong> {{ num_instances_taken }}</li>
+      <li><strong>Reserved:</strong> {{ num_instances_reserved }}</li>
+    </ul>
+  </ul>
+{% endblock %}
